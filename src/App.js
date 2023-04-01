@@ -13,10 +13,14 @@ function App() {
   // You can have multiple useState(); and they will be managed independently
   //It returns exactly 2 elements:
   //latest snapchot and how to re-render
-  //2nd: function to update the elements
+  //2nd: function to update the state 
+  //
+  //
+  //
+  //UseState: is hopw you manage states in functiomal components
   //using array de-structuring
 
-  //Here, you're using the localStorage API to store the updated state as a 
+  //Here, I'm using the localStorage API to store the updated state as a 
   //JSON string. You can also retrieve the stored state when the component is 
   //loaded using the getItem method of the localStorage object:
 
@@ -44,6 +48,7 @@ function App() {
   //trigger an action back to the parent component.
   const addNewGoalHandler = (newGoal) => {
     setCourseGoals(prevGoals => {
+      //if our curr state depends on the previous state
       const updatedGoals = prevGoals.concat(newGoal);
       localStorage.setItem('courseGoals', JSON.stringify(updatedGoals));
       return updatedGoals;
@@ -51,7 +56,7 @@ function App() {
       // courseGoals.concat(newGoal))
     //push changes something
     // courseGoals.push(newGoal);
-    // console.log(newGoal)
+    // console.log(newGoal) 
   };
 
   // All of this converted to React.createElement(...)

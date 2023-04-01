@@ -71,4 +71,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # mernApp
 
-> > > > > > > origin/main
+Pages folder is also named as containers: because In React pages which contain all the main logic and the state management
+
+# To enable the routing : Package required:
+
+npm install --save react-router-dom@5 --save--exact
+
+Routing: starts in App.js file
